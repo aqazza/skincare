@@ -1,3 +1,8 @@
+:root {
+    --font-marcellus: 'Marcellus', serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+  }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -38,4 +43,17 @@ a {
   @apply bg-accent min-w-[178px] rounded-tl-[30px] rounded-bl-[30px] rounded-tr-[4px]
     rounded-br-[24px] font-primary uppercase tracking-[1px] h-[60px] pl-8
     pr-6 flex items-center justify-center text-white;
+}
+
+.input {
+  @apply bg-white rounded-full px-6;
+}
+
+.textarea {
+    @apply h-[120px] rounded-[20px] px-6 pt-4 resize-none;
+}
+
+.input, .textarea {
+  @apply outline-none ring-1 ring-accent/80 focus:ring-1 focus:ring-accent
+  font-primary text-sm uppercase placeholder:text-primary text-primary;
 }

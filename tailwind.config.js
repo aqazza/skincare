@@ -4,19 +4,38 @@ module.exports = {
   content: [
     './pages/**/*.{js,jsx}',
     './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
+    './app/**/*.{js,jsx, css}',
     './src/**/*.{js,jsx}',
   ],
   prefix: "",
   theme: {
     container: {
       center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      padding: "15px",
+    },
+    screens: {
+      sm: "648px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+    },
+    fontFamily: {
+      primary: "var(--font-marcellus)",
+      secondary: "var(--font-montserrat)",
     },
     extend: {
+      colors: {
+        primary: {
+          DEFAULT: "#473936"
+        },
+        secondary: {
+          DEFAULT: "#F2E9E4"
+        },
+        accent: {
+          DEFAULT: "#F2C14E",
+          100: "#f2d5c5",
+        },
+        },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
