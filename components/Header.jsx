@@ -1,12 +1,13 @@
 "use client";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react"; // Import useState along with useContext
 import { CursorContext } from "./CursorContext";
 import { motion } from "framer-motion";
 import { AiOutlineMenu } from "react-icons/ai"; // Import the AiOutlineMenu icon
 
 const Header = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
-  const [mobileNav, setMobileNav] = useState(false);
+  const [mobileNav, setMobileNav] = useState(false); // Now useState is defined
+
   return (
     <header className="pb-6 xl:pb-[50px] fixed z-40 w-full bg-accent-100 xl:bg-transparent">
       {/* topbar */}
